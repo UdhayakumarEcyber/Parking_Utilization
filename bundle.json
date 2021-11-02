@@ -1,0 +1,22 @@
+{
+    "id": "9ceafdfe-743e-44da-de21-6e888489f46d",
+    "author": "Eutech",
+    "widgets": [
+        {
+            "id": "Parking_Utilization",
+            "name": "Parking Utilization",
+            "description": "A Parking widget",
+            "icon": "",
+            "tags":[]
+        }
+    ],
+    "sidebarLinks": [
+        
+    ],
+    "uis": [
+       
+    ],
+    "menuItems": [
+        
+    ]
+}

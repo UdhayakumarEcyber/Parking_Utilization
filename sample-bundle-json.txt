@@ -1,0 +1,37 @@
+{
+    "id": "afcff3bd-8c26-4a89-92ce-2f81430ec607",
+    "author": "",
+    "widgets": [
+        {
+            "id": "Parking_Utilization",
+            "name": "Parking_Utilization",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        }
+    ],
+    "sidebarLinks": [
+        {
+            "id": "Parking_UtilizationLink",
+            "label": "",
+            "description": "",
+            "target": "",
+            "icon": "",
+            "roles":[]
+        }
+    ],
+    "uis": [
+        {
+            "id": "Parking_UtilizationLink",
+            "label":"",
+            "description": "",
+            "roles": []
+        }
+    ],
+    "menuItems": [
+        {
+            "id": "Parking_UtilizationLink",
+            "title": "Parking_Utilization"
+        }
+    ]
+}
