@@ -10300,9 +10300,9 @@ module.exports = /*#__PURE__*/function (_BaseClient) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8089":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8085":
 /*!*********************************************************!*\
-  !*** (webpack)-dev-server/client?http://localhost:8089 ***!
+  !*** (webpack)-dev-server/client?http://localhost:8085 ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10484,7 +10484,7 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
-/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8089"))
+/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8085"))
 
 /***/ }),
 
@@ -11223,7 +11223,560 @@ const Parking_UtilizationWidget = (props) => {
                 DateQuery: DateQuery
             };
             // let cdata = await props.uxpContext.executeAction('AdaniDashboard','PMSOccupancylevel',params,{json:true});
-            let cdata = yield props.uxpContext.executeAction('AdaniDashboard', 'PMSOccupancy', params, { json: true });
+            //  let cdata = await props.uxpContext.executeAction('AdaniDashboard','PMSOccupancy',params,{json:true});
+            //  var DateQuery=inputs.DateQuery;
+            var cdata;
+            if (DateQuery == 'Daily') {
+                cdata =
+                    { "ParkingUtilization": {
+                            "ParkingSpaceUsed": "30%",
+                            "EmployeeParkingSpaceUsed": "15",
+                            "TotalEmployeeParkingSpace": "200",
+                            "VisitorParkingSpaceUsed": "25",
+                            "TotalVistorParkingSpace": "100",
+                            "AvailableParkingSpace": "6%",
+                            "details": {
+                                "PeakHourOccupancy": "16%",
+                                "result": [
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "0",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T00:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "1",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T01:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "1",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "2",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T02:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "15",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "3",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T03:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "26",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "4",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T04:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "-35",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "5",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T05:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "-17",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "6",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T06:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "5",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "7",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T07:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "23",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "8",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T08:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "35",
+                                        "TotalVisitorVehicles": "2",
+                                        "Number": "9",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T09:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "28",
+                                        "TotalVisitorVehicles": "3",
+                                        "Number": "10",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T10:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "-56",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "11",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T11:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "6",
+                                        "Number": "12",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T12:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "80",
+                                        "TotalVisitorVehicles": "6",
+                                        "Number": "13",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T13:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "90",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "14",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T14:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "95",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "15",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T15:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "5",
+                                        "Number": "16",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T16:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "5",
+                                        "Number": "17",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T17:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "18",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T18:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "19",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T19:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "106",
+                                        "TotalVisitorVehicles": "10",
+                                        "Number": "20",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T20:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "21",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T21:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "22",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T22:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "9",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "23",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T23:38:35.833"
+                                    }
+                                ]
+                            }
+                        }
+                    };
+            }
+            else if (DateQuery == 'Weekly') {
+                cdata = {
+                    "ParkingUtilization": {
+                        "ParkingSpaceUsed": "42%",
+                        "EmployeeParkingSpaceUsed": "16",
+                        "TotalEmployeeParkingSpace": "200",
+                        "VisitorParkingSpaceUsed": "12",
+                        "TotalVistorParkingSpace": "100",
+                        "AvailableParkingSpace": "6%",
+                        "details": {
+                            "PeakHourOccupancy": "18%",
+                            "result": [
+                                {
+                                    "TotalEmployeeVehicles": "0",
+                                    "TotalVisitorVehicles": "0",
+                                    "Number": "1",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-19T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "45",
+                                    "TotalVisitorVehicles": "60",
+                                    "Number": "2",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-20T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "80",
+                                    "TotalVisitorVehicles": "43",
+                                    "Number": "3",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-21T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "100",
+                                    "TotalVisitorVehicles": "60",
+                                    "Number": "4",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-22T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "110",
+                                    "TotalVisitorVehicles": "120",
+                                    "Number": "5",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-23T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "65",
+                                    "TotalVisitorVehicles": "153",
+                                    "Number": "6",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-24T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "100",
+                                    "TotalVisitorVehicles": "160",
+                                    "Number": "7",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-25T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "100",
+                                    "TotalVisitorVehicles": "60",
+                                    "Number": "4",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-26T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "110",
+                                    "TotalVisitorVehicles": "120",
+                                    "Number": "5",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-27T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "65",
+                                    "TotalVisitorVehicles": "153",
+                                    "Number": "6",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-28T19:00:46.96"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "0",
+                                    "TotalVisitorVehicles": "0",
+                                    "Number": "7",
+                                    "Frequency": "Day",
+                                    "isoDate": "2020-04-29T19:00:46.96"
+                                }
+                            ]
+                        }
+                    }
+                };
+            }
+            else if (DateQuery == 'Monthly') {
+                cdata = {
+                    "ParkingUtilization": {
+                        "ParkingSpaceUsed": "28%",
+                        "EmployeeParkingSpaceUsed": "34",
+                        "TotalEmployeeParkingSpace": "200",
+                        "VisitorParkingSpaceUsed": "6",
+                        "TotalVistorParkingSpace": "100",
+                        "AvailableParkingSpace": "15%",
+                        "details": {
+                            "PeakHourOccupancy": "3%",
+                            "result": [
+                                {
+                                    "TotalEmployeeVehicles": "0",
+                                    "TotalVisitorVehicles": "2",
+                                    "Number": "14",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-01T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "98",
+                                    "TotalVisitorVehicles": "230",
+                                    "Number": "15",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-05T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "800",
+                                    "TotalVisitorVehicles": "107",
+                                    "Number": "16",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-12T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "873",
+                                    "TotalVisitorVehicles": "178",
+                                    "Number": "17",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-19T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "498",
+                                    "TotalVisitorVehicles": "106",
+                                    "Number": "18",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-01T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "567",
+                                    "TotalVisitorVehicles": "230",
+                                    "Number": "19",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-05T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "800",
+                                    "TotalVisitorVehicles": "107",
+                                    "Number": "20",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-12T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "873",
+                                    "TotalVisitorVehicles": "178",
+                                    "Number": "21",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-19T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "800",
+                                    "TotalVisitorVehicles": "107",
+                                    "Number": "22",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-12T19:05:27.193"
+                                },
+                                {
+                                    "TotalEmployeeVehicles": "89",
+                                    "TotalVisitorVehicles": "178",
+                                    "Number": "23",
+                                    "Frequency": "Week",
+                                    "isoDate": "2020-04-19T19:05:27.193"
+                                }
+                            ]
+                        }
+                    }
+                };
+            }
+            else {
+                cdata =
+                    { "ParkingUtilization": {
+                            "ParkingSpaceUsed": "3%",
+                            "EmployeeParkingSpaceUsed": "5",
+                            "TotalEmployeeParkingSpace": "200",
+                            "VisitorParkingSpaceUsed": "6",
+                            "TotalVistorParkingSpace": "100",
+                            "AvailableParkingSpace": "6%",
+                            "details": {
+                                "PeakHourOccupancy": "3%",
+                                "result": [
+                                    {
+                                        "TotalEmployeeVehicles": "1",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "0",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T00:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "1",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T01:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "2",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T02:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "3",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T03:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "4",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T04:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "0",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "5",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T05:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "2",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "6",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T06:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "5",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "7",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T07:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "23",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "8",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T08:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "35",
+                                        "TotalVisitorVehicles": "2",
+                                        "Number": "9",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T09:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "28",
+                                        "TotalVisitorVehicles": "3",
+                                        "Number": "10",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T10:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "56",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "11",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T11:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "80",
+                                        "TotalVisitorVehicles": "6",
+                                        "Number": "12",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T12:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "80",
+                                        "TotalVisitorVehicles": "6",
+                                        "Number": "13",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T13:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "90",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "14",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T14:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "95",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "15",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T15:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "5",
+                                        "Number": "16",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T16:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "5",
+                                        "Number": "17",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T17:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "18",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T18:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "19",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T19:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "106",
+                                        "TotalVisitorVehicles": "10",
+                                        "Number": "20",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T20:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "7",
+                                        "Number": "21",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T21:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "96",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "22",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T22:38:35.833"
+                                    },
+                                    {
+                                        "TotalEmployeeVehicles": "9",
+                                        "TotalVisitorVehicles": "0",
+                                        "Number": "23",
+                                        "Frequency": "Hour",
+                                        "isoDate": "2020-04-20T23:38:35.833"
+                                    }
+                                ]
+                            }
+                        }
+                    };
+            }
             let me = cdata.ParkingUtilization;
             let details = me.details;
             let result = details.result;
@@ -11374,7 +11927,7 @@ const Parking_UtilizationWidget = (props) => {
     const App = () => (React.createElement("div", null,
         React.createElement(highcharts_react_official_1.default, { highcharts: Highcharts, options: highchartsOptions })));
     return (React.createElement(components_1.WidgetWrapper, { className: "parking-widget" },
-        React.createElement(components_1.TitleBar, { title: "PARKING UTILIZATION", icon: "https://static.iviva.com/images/Adani_UXP/cafeteria-icon.svg" },
+        React.createElement(components_1.TitleBar, { title: "PARKING UTILIZATION", icon: "https://static.iviva.com/images/uxp-generic-widgets/car.svg" },
             React.createElement("div", { className: "cafeteria-top-options" },
                 React.createElement("ul", { className: "meeting-room-top-tabs" },
                     React.createElement("li", { id: 'Monthly-Btn', onClick: () => { getParkingDetails('Monthly'); } },
@@ -11536,12 +12089,12 @@ exports.registerUI = registerUI;
 
 /***/ 0:
 /*!*******************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://localhost:8089 ./src/index.tsx ***!
+  !*** multi (webpack)-dev-server/client?http://localhost:8085 ./src/index.tsx ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Udhay Project files\Project-2021\uxp-generic-widgets\Parking_Utilization\node_modules\webpack-dev-server\client\index.js?http://localhost:8089 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8089");
+__webpack_require__(/*! D:\Udhay Project files\Project-2021\uxp-generic-widgets\Parking_Utilization\node_modules\webpack-dev-server\client\index.js?http://localhost:8085 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8085");
 module.exports = __webpack_require__(/*! ./src/index.tsx */"./src/index.tsx");
 
 
